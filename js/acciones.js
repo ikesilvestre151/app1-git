@@ -14,5 +14,21 @@ $(document).ready(function(e) {
 			escribehistoria ('la app se reinicio');
 		},false);//resume
 		document.addEventListener("online",function(){
-			
-});
+			escribehistoria ('la app se conecto a la red');
+		},false);//se conecto
+		document.addEventListener("online",function(){
+			escribehistoria ('la app se desconecto de la red');
+		},false);//se desconecto
+		
+		
+	},false);//ready device
+	
+	
+});//document
+
+function escribehistoria(accion){
+	$('#eHistoria').append('<li>'+accion+'</li>');
+}
+	
+	
+	
